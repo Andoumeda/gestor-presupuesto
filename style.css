@@ -35,6 +35,10 @@ h1 {
     align-items: center;
 }
 
+canvas {
+    max-width: 65%;
+}
+
 #contenedor-ingresos-gastos {
     display: flex;
     justify-content: space-between;
@@ -78,6 +82,14 @@ h1 {
     margin-left: 20px;
 }
 
+ul {
+    padding: 0;
+}
+
+ul li {
+    gap: 20px;
+}
+
 input, button {
     margin-bottom: 10px;
     padding: 10px;
@@ -118,5 +130,19 @@ button:disabled {
 }
 
 #agregar-gasto:hover {
+    background-color: darkred;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background-color: red;
+}
+
+li button:hover {
     background-color: darkred;
 }

@@ -1,0 +1,88 @@
+body {
+    font-family: sans-serif;
+    background-color: lightgrey;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+}
+
+#contenedor-balance {
+    display: flex;
+}
+
+#contenedor-resumen {
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor-grafico {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedor-ingresos-gastos {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#contenedor-listas {
+    width: 45vw;
+}
+
+#listas {
+    display: flex;
+}
+
+#lista-ingresos, #lista-gastos {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+input {
+    border: 1px solid grey;
+}
+
+.campo-monto {
+    width: 130px;
+}
+
+button {
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#agregar-ingreso {
+    background-color: green;
+}
+
+#agregar-ingreso:hover {
+    background-color: darkgreen;
+}
+
+#agregar-gasto {
+    background-color: red;
+}
+
+#agregar-gasto:hover {
+    background-color: darkred;
+}

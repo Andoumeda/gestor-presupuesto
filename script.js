@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             li.textContent = `${ingreso.descripcion}: Gs. ${ingreso.monto}`;
 
             const btnEliminar = document.createElement('button');
-            btnEliminar.textContent = 'Eliminar';
+            btnEliminar.textContent = '× Eliminar';
             btnEliminar.onclick = () => {
                 ingresos.splice(indice, 1); // Elimina 1 elemento en el índice actual
                 actualizarBalance();
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             li.textContent = `${gasto.descripcion}: Gs. ${gasto.monto}`;
 
             const btnEliminar = document.createElement('button');
-            btnEliminar.textContent = 'Eliminar';
+            btnEliminar.textContent = '× Eliminar';
             btnEliminar.onclick = () => {
                 gastos.splice(indice, 1);
                 actualizarBalance();
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     labels: ['Ingresos', 'Gastos'],
                     datasets: [{
                         data: [totalIngresos, totalGastos],
-                        backgroundColor: ['green', 'red'],
+                        backgroundColor: ['lightseagreen', '#6070f0'],
                         borderWidth: 0
                     }]
                 },

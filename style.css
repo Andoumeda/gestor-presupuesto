@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color: lightblue;
     color: #222;
 }
 
@@ -118,19 +118,19 @@ button:disabled {
 }
 
 #agregar-ingreso {
-    background-color: green;
+    background-color: lightseagreen;
 }
 
 #agregar-ingreso:hover {
-    background-color: darkgreen;
+    background-color: seagreen;
 }
 
 #agregar-gasto {
-    background-color: red;
+    background-color: #6070f0;
 }
 
 #agregar-gasto:hover {
-    background-color: darkred;
+    background-color: #4049c0;
 }
 
 li {

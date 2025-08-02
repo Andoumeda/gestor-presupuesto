@@ -4,47 +4,61 @@
         <title>Rastreador de Presupuesto Personal</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
     <body>
         <h1>Rastreador de Presupuesto Personal</h1>
 
-        <div id="contenedor-forms">
-            <div id="formulario">
-                <h2>Agregar Ingreso</h2>
-
-                <form id="form-ingreso">
-                    <input id="descripcion-ingreso" placeholder="Descripción" required>
-                    <input type="number" min="1" class="campo-monto" id="monto-ingreso" placeholder="Monto en Gs." required>
-                    <button id="agregar-ingreso" type="submit">+ Agregar Ingreso</button>
-                </form>
+        <div id="contenedor-balance">
+            <div id="contenedor-resumen">
+                <h2 id="balance">Balance Actual</h2>
             </div>
 
-            <div id="formulario">
-                <h2>Agregar Gasto</h2>
-
-                <form id="form-gasto">
-                    <input id="descripcion-gasto" placeholder="Descripción" required>
-                    <input type="number" min="1" class="campo-monto" id="monto-gasto" placeholder="Monto en Gs." required>
-                    <button id="agregar-gasto" type="submit">+ Agregar Gasto</button>
-                </form>
+            <div id="contenedor-grafico">
+                <h2>Vista gráfica</h2>
+                <canvas id="grafico"></canvas>
             </div>
         </div>
-        
-        <div id="contenedor-listas">
-            <div>
-                <h2 id="titulo-listas">Lista de Ingresos y Gastos</h2>
-            </div>
 
-            <div id="listas">
-                <div id="lista-ingresos">
-                    <h3>Ingresos</h3>
-                    <ul></ul>
+        <div id="contenedor-ingresos-gastos">
+            <div id="contenedor-forms">
+                <div id="formulario">
+                    <h2>Agregar Ingreso</h2>
+
+                    <form id="form-ingreso">
+                        <input id="descripcion-ingreso" placeholder="Descripción" required>
+                        <input type="number" min="1" class="campo-monto" id="monto-ingreso" placeholder="Monto en Gs." required>
+                        <button id="agregar-ingreso" type="submit">+ Agregar Ingreso</button>
+                    </form>
                 </div>
 
-                <div id="lista-gastos">
-                    <h3>Gastos</h3>
-                    <ul></ul>
+                <div id="formulario">
+                    <h2>Agregar Gasto</h2>
+
+                    <form id="form-gasto">
+                        <input id="descripcion-gasto" placeholder="Descripción" required>
+                        <input type="number" min="1" class="campo-monto" id="monto-gasto" placeholder="Monto en Gs." required>
+                        <button id="agregar-gasto" type="submit">+ Agregar Gasto</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="contenedor-listas">
+                <div>
+                    <h2 id="titulo-listas">Lista de Ingresos y Gastos</h2>
+                </div>
+
+                <div id="listas">
+                    <div id="lista-ingresos">
+                        <h3>Ingresos</h3>
+                        <ul></ul>
+                    </div>
+
+                    <div id="lista-gastos">
+                        <h3>Gastos</h3>
+                        <ul></ul>
+                    </div>
                 </div>
             </div>
         </div>

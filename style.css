@@ -10,16 +10,26 @@ h1 {
 
 #contenedor-balance {
     display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 #contenedor-resumen {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     width: 45vw;
+    padding: 10px;
     display: flex;
     justify-content: center;
 }
 
 #contenedor-grafico {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     width: 45vw;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,12 +41,30 @@ h1 {
     margin: 20px;
 }
 
-#contenedor-listas {
+#contenedor-forms {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     width: 45vw;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedor-listas {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    width: 45vw;
+    padding: 10px;
 }
 
 #listas {
     display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
 }
 
 #lista-ingresos, #lista-gastos {
@@ -46,10 +74,16 @@ h1 {
     align-items: center;
 }
 
+#titulo-listas {
+    margin-left: 20px;
+}
+
 input, button {
+    margin-bottom: 10px;
     padding: 10px;
     font-size: 16px;
     border-radius: 7px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
 }
 
 input {

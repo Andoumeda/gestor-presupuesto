@@ -9,24 +9,44 @@
     <body>
         <h1>Rastreador de Presupuesto Personal</h1>
 
-        <div id="formulario">
-            <h2>Agregar Ingreso</h2>
+        <div id="contenedor-forms">
+            <div id="formulario">
+                <h2>Agregar Ingreso</h2>
 
-            <form id="form-ingreso">
-                <input id="descripcion-ingreso" placeholder="Descripción" required>
-                <input type="number" min="1" id="monto-ingreso" placeholder="Monto en Gs." required>
-                <button id="agregar-ingreso" type="submit">Agregar Ingreso</button>
-            </form>
+                <form id="form-ingreso">
+                    <input id="descripcion-ingreso" placeholder="Descripción" required>
+                    <input type="number" min="1" class="campo-monto" id="monto-ingreso" placeholder="Monto en Gs." required>
+                    <button id="agregar-ingreso" type="submit">+ Agregar Ingreso</button>
+                </form>
+            </div>
+
+            <div id="formulario">
+                <h2>Agregar Gasto</h2>
+
+                <form id="form-gasto">
+                    <input id="descripcion-gasto" placeholder="Descripción" required>
+                    <input type="number" min="1" class="campo-monto" id="monto-gasto" placeholder="Monto en Gs." required>
+                    <button id="agregar-gasto" type="submit">+ Agregar Gasto</button>
+                </form>
+            </div>
         </div>
+        
+        <div id="contenedor-listas">
+            <div>
+                <h2 id="titulo-listas">Lista de Ingresos y Gastos</h2>
+            </div>
 
-        <div id="formulario">
-            <h2>Agregar Gasto</h2>
+            <div id="listas">
+                <div id="lista-ingresos">
+                    <h3>Ingresos</h3>
+                    <ul></ul>
+                </div>
 
-            <form id="form-gasto">
-                <input id="descripcion-gasto" placeholder="Descripción" required>
-                <input type="number" min="1" id="monto-gasto" placeholder="Monto en Gs." required>
-                <button id="agregar-gasto" type="submit">Agregar Gasto</button>
-            </form>
+                <div id="lista-gastos">
+                    <h3>Gastos</h3>
+                    <ul></ul>
+                </div>
+            </div>
         </div>
     </body>
 </html>

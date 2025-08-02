@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Rastreador de Presupuesto Personal</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <h1>Rastreador de Presupuesto Personal</h1>
+
+        <div id="formulario">
+            <h2>Agregar Ingreso</h2>
+
+            <form id="form-ingreso">
+                <input id="descripcion-ingreso" placeholder="Descripción" required>
+                <input type="number" min="1" id="monto-ingreso" placeholder="Monto en Gs." required>
+                <button id="agregar-ingreso" type="submit">Agregar Ingreso</button>
+            </form>
+        </div>
+
+        <div id="formulario">
+            <h2>Agregar Gasto</h2>
+
+            <form id="form-gasto">
+                <input id="descripcion-gasto" placeholder="Descripción" required>
+                <input type="number" min="1" id="monto-gasto" placeholder="Monto en Gs." required>
+                <button id="agregar-gasto" type="submit">Agregar Gasto</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const montoGasto = document.getElementById('monto-gasto');
 
     const elemBalance = document.getElementById('balance');
+    const elemTotalIngresos = document.getElementById('total-ingresos');
+    const elemTotalGastos = document.getElementById('total-gastos');
 
     const elemListaIngresos = document.getElementById('lista-ingresos').querySelector('ul');
     const elemListaGastos = document.getElementById('lista-gastos').querySelector('ul');
@@ -30,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             elemBalance.style.color = '#222';
 
         elemBalance.textContent = `Balance Actual: Gs. ${balance}`;
+        elemTotalIngresos.textContent = `Total Ingresos: Gs. ${totalIngresos}`;
+        elemTotalGastos.textContent = `Total Gastos: Gs. ${totalGastos}`;
 
         localStorage.setItem('ingresos', JSON.stringify(ingresos));
         localStorage.setItem('gastos', JSON.stringify(gastos));
@@ -90,7 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     }]
                 },
                 options: {
-                    //responsive: true
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 30
+                            }
+                        }
+                    }
                 }
             });
         }

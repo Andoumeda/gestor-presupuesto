@@ -20,8 +20,11 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     width: 45vw;
     padding: 10px;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #contenedor-grafico {
@@ -36,13 +39,15 @@ h1 {
 }
 
 canvas {
-    max-width: 65%;
+    max-height: 300px;
+    width: 90% !important;
+    padding: 20px 0;
 }
 
 #contenedor-ingresos-gastos {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 30px 20px;
 }
 
 #contenedor-forms {

@@ -27,6 +27,43 @@ h1 {
     align-items: center;
 }
 
+#balance {
+    margin-bottom: 35px;
+}
+
+#contenedor-totales {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#contenedor-ingresos, #contenedor-gastos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border-radius: 10px;
+    box-shadow: inset -4px 10px 15px rgba(0, 0, 0, 0.3);
+    width: 19vw;
+    padding: 10px;
+}
+
+#contenedor-ingresos {
+    background: rgba(144, 238, 144, 1);
+}
+
+#contenedor-gastos {
+    background: rgba(255, 99, 71, 0.3);
+}
+
+#contenedor-totales h3 {
+    margin-bottom: 8px;
+}
+
+#total-ingresos, #total-gastos {
+    margin-top: 8px;
+}
+
 #contenedor-grafico {
     background-color: white;
     border-radius: 10px;
@@ -39,8 +76,8 @@ h1 {
 }
 
 canvas {
-    max-height: 300px;
-    width: 90% !important;
+    max-height: 270px;
+    width: 88% !important;
     padding: 20px 0;
 }
 
@@ -100,7 +137,7 @@ input, button {
     padding: 10px;
     font-size: 16px;
     border-radius: 7px;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
 }
 
 input {

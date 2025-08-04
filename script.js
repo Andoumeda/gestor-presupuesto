@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             elemBalance.style.color = '#222';
 
         elemBalance.textContent = `Balance Actual: Gs. ${balance}`;
-        elemTotalIngresos.textContent = `Total Ingresos: Gs. ${totalIngresos}`;
-        elemTotalGastos.textContent = `Total Gastos: Gs. ${totalGastos}`;
+        elemTotalIngresos.textContent = `Gs. ${totalIngresos}`;
+        elemTotalGastos.textContent = `Gs. ${totalGastos}`;
 
         localStorage.setItem('ingresos', JSON.stringify(ingresos));
         localStorage.setItem('gastos', JSON.stringify(gastos));
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ingresos.forEach((ingreso, indice) => {
             const li = document.createElement('li');
-            li.textContent = `${ingreso.descripcion}: Gs. ${ingreso.monto}`;
+            li.innerHTML = `<div><b>${ingreso.descripcion}:</b> Gs. ${ingreso.monto}</div>`;
 
             const btnEliminar = document.createElement('button');
             btnEliminar.textContent = '× Eliminar';
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         gastos.forEach((gasto, indice) => {
             const li = document.createElement('li');
-            li.textContent = `${gasto.descripcion}: Gs. ${gasto.monto}`;
+            li.innerHTML = `<div><b>${gasto.descripcion}:</b> Gs. ${gasto.monto}</div>`;
 
             const btnEliminar = document.createElement('button');
             btnEliminar.textContent = '× Eliminar';
@@ -90,15 +90,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         data: [totalIngresos, totalGastos],
                         backgroundColor: ['lightseagreen', '#6070f0'],
-                        borderWidth: 0
+                        borderWidth: 0,
+                        hoverOffset: 12
                     }]
                 },
                 options: {
                     plugins: {
                         legend: {
-                            position: 'bottom',
+                            position: 'left',
                             labels: {
-                                padding: 30
+                                padding: 60,
+                                usePointStyle: true,
+                                pointStyle: 'rectRounded',
+                                font: {
+                                    size: 18
+                                }
                             }
                         }
                     }

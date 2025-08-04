@@ -24,16 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalGastos = gastos.reduce((acc, gasto) => acc + gasto.monto, 0);
         const balance = totalIngresos - totalGastos;
 
-        if (balance < 0)
-            elemBalance.style.color = 'red';
-        else if (balance > 0)
-            elemBalance.style.color = 'green';
-        else
-            elemBalance.style.color = '#222';
+        elemBalance.style.color = (balance < 0) ? 'red'
+                                : (balance > 0) ? 'green'
+                                : '#222';
 
-        elemBalance.textContent = `Balance Actual: Gs. ${balance}`;
-        elemTotalIngresos.textContent = `Gs. ${totalIngresos}`;
-        elemTotalGastos.textContent = `Gs. ${totalGastos}`;
+        elemBalance.textContent = `Balance Actual: Gs. ${balance.toLocaleString('es-PY')}`;
+        elemTotalIngresos.textContent = `Gs. ${totalIngresos.toLocaleString('es-PY')}`;
+        elemTotalGastos.textContent = `Gs. ${totalGastos.toLocaleString('es-PY')}`;
 
         localStorage.setItem('ingresos', JSON.stringify(ingresos));
         localStorage.setItem('gastos', JSON.stringify(gastos));
@@ -48,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ingresos.forEach((ingreso, indice) => {
             const li = document.createElement('li');
-            li.innerHTML = `<div><b>${ingreso.descripcion}:</b> Gs. ${ingreso.monto}</div>`;
+            li.innerHTML = `<div><b>${ingreso.descripcion}:</b> Gs. ${ingreso.monto.toLocaleString('es-PY')}</div>`;
 
             const btnEliminar = document.createElement('button');
             btnEliminar.textContent = '× Eliminar';
@@ -63,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         gastos.forEach((gasto, indice) => {
             const li = document.createElement('li');
-            li.innerHTML = `<div><b>${gasto.descripcion}:</b> Gs. ${gasto.monto}</div>`;
+            li.innerHTML = `<div><b>${gasto.descripcion}:</b> Gs. ${gasto.monto.toLocaleString('es-PY')}</div>`;
 
             const btnEliminar = document.createElement('button');
             btnEliminar.textContent = '× Eliminar';
@@ -114,21 +111,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     montoIngreso.addEventListener('input', () => {
-        if (montoIngreso.value <= 0)
-            document.getElementById('agregar-ingreso').disabled = true;
-        else
-            document.getElementById('agregar-ingreso').disabled = false;
+        document.getElementById('agregar-ingreso').disabled = (montoIngreso.value <= 0);
     });
 
     montoGasto.addEventListener('input', () => {
-        if (montoGasto.value <= 0)
-            document.getElementById('agregar-gasto').disabled = true;
-        else
-            document.getElementById('agregar-gasto').disabled = false;
+        document.getElementById('agregar-gasto').disabled = (montoGasto.value <= 0);
     });
 
     formIngreso.addEventListener('submit', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Evita recargar la página
 
         const descripcion = document.getElementById('descripcion-ingreso').value;
         const monto = parseInt(montoIngreso.value);
@@ -136,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ingresos.push({ descripcion, monto });
         actualizarBalance();
 
-        e.target.reset();
+        e.target.reset(); // Vacía el formulario
     });
 
     formGasto.addEventListener('submit', (e) => {

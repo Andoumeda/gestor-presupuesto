@@ -11,7 +11,7 @@
         <h1>Rastreador de Presupuesto Personal</h1>
 
         <div id="contenedor-balance">
-            <div id="contenedor-resumen">
+            <div class="tarjeta" id="contenedor-resumen">
                 <h2 id="balance">Balance Actual</h2>
 
                 <div id="contenedor-totales">
@@ -27,19 +27,19 @@
                 </div>
             </div>
 
-            <div id="contenedor-grafico">
+            <div class="tarjeta" id="contenedor-grafico">
                 <canvas id="grafico"></canvas>
             </div>
         </div>
 
         <div id="contenedor-ingresos-gastos">
-            <div id="contenedor-forms">
+            <div class="tarjeta" id="contenedor-forms">
                 <div id="formulario">
                     <h2>Agregar Ingreso</h2>
 
                     <form id="form-ingreso">
-                        <input id="descripcion-ingreso" placeholder="Descripción" required>
-                        <input type="number" min="1" class="campo-monto" id="monto-ingreso" placeholder="Monto en Gs." required>
+                        <input id="descripcion-ingreso" placeholder="Descripción" autocomplete="off" required>
+                        <input type="number" min="1" id="monto-ingreso" placeholder="Monto en Gs." required>
                         <button id="agregar-ingreso" type="submit">+ Agregar Ingreso</button>
                     </form>
                 </div>
@@ -48,14 +48,14 @@
                     <h2>Agregar Gasto</h2>
 
                     <form id="form-gasto">
-                        <input id="descripcion-gasto" placeholder="Descripción" required>
-                        <input type="number" min="1" class="campo-monto" id="monto-gasto" placeholder="Monto en Gs." required>
+                        <input id="descripcion-gasto" placeholder="Descripción" autocomplete="off" required>
+                        <input type="number" min="1" id="monto-gasto" placeholder="Monto en Gs." required>
                         <button id="agregar-gasto" type="submit">+ Agregar Gasto</button>
                     </form>
                 </div>
             </div>
-            
-            <div id="contenedor-listas">
+
+            <div class="tarjeta" id="contenedor-listas">
                 <div>
                     <h2 id="titulo-listas">Lista de Ingresos y Gastos</h2>
                 </div>

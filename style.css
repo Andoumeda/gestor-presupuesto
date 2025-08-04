@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: system-ui;
     background-color: lightblue;
     color: #222;
 }
@@ -14,13 +14,16 @@ h1 {
     margin: 20px;
 }
 
-#contenedor-resumen {
+.tarjeta {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
     width: 45vw;
     padding: 10px;
+}
 
+#contenedor-resumen {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,11 +52,11 @@ h1 {
 }
 
 #contenedor-ingresos {
-    background: rgba(144, 238, 144, 1);
+    background: rgba(32, 218, 170, 0.4);
 }
 
 #contenedor-gastos {
-    background: rgba(255, 99, 71, 0.3);
+    background: rgba(186, 112, 200, 0.4);
 }
 
 #contenedor-totales h3 {
@@ -65,11 +68,6 @@ h1 {
 }
 
 #contenedor-grafico {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    width: 45vw;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,23 +86,9 @@ canvas {
 }
 
 #contenedor-forms {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    width: 45vw;
-    padding: 10px;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#contenedor-listas {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    width: 45vw;
-    padding: 10px;
 }
 
 #listas {
@@ -144,7 +128,7 @@ input {
     border: 1px solid grey;
 }
 
-.campo-monto {
+#monto-ingreso, #monto-gasto {
     width: 130px;
 }
 
@@ -155,7 +139,7 @@ button {
 }
 
 button:disabled {
-    background-color: grey;
+    background-color: grey !important;
     cursor: not-allowed;
 }
 
